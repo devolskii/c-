@@ -1,6 +1,9 @@
 #include <cstddef> //for size_t
 char **allocate(size_t rows, size_t cols) {
-  char **board = new char *[rows];
+  char **board = new char *[rows]; //   In C we would: char **board = (char
+                                   //   **)malloc(r * sizeof(char *));
+                                   // If error, you can return nullptr instead:
+                                   // int *ptr = new(nothrow) int
   for (size_t i = 0; i < rows; i++) {
     board[i] = new char[cols];
   }

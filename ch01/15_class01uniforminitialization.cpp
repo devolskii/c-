@@ -27,7 +27,7 @@ int A::getc() const { return mc; }
 void A::seta(std::string a) { ma = a; }
 
 int main() {
-  A obj1{"BB", true, 5}, obj2;
+  A obj1{"BB", true, 5}, obj2; // To initialize objects in a struct like way
   std::cout << obj1.geta() << obj1.getb() << obj1.getc() << std::endl;
   std::cout << obj2.geta() << obj2.getb() << obj2.getc() << std::endl;
   auto obj3 = std::make_unique<A>();
