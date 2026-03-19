@@ -11,7 +11,7 @@ public:
   A();
   A(std::string a, bool b, int c);
   ~A();
-  std::string geta() const;
+  std::string geta() const; // const member function
   bool getb() const;
   int getc() const;
   void seta(std::string a);

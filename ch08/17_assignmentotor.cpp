@@ -46,11 +46,11 @@ int main() {
     ^^ This is just a statement. Once it's done executing, the result of the
     expression (the returned A&) has nowhere to go — no variable is waiting to
     receive it. So it simply vanishes, just like this:
-      cpp5 + 3; // result is 8, but nobody stores it, so it's gone
+      5 + 3; // result is 8, but nobody stores it, so it's gone
       getMData(); // returns an int, but if you don't
-    store it, it's discarded The same principle applies here — the returned
-    reference is the result of an expression, and if you don't capture it, it's
-    lost.
+                  // store it, it's discarded The same principle applies here —
+                  // the returned reference is the result of an expression,
+                  // and if you don't capture it, it's lost.
   */
   std::cout << "obj1: " << obj1.getMData() << ", obj2: " << obj2.getMData()
             << std::endl;
