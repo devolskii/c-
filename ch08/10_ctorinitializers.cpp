@@ -18,7 +18,7 @@ C::C(std::string s) : str(s) {}
 // default constructor. B::B() {} //won't compile
 
 // so...
-B::B() : obj(0) {}
+B::B() : mobj(0) {}
 
 int main() {
   C o1;
@@ -49,4 +49,7 @@ int main() {
     Base classes without     |
     default constructors     |
     -----------------------------------------------------------------------
+
+      3 is working fine w/o ctor initializer
+
 */

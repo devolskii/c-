@@ -12,7 +12,7 @@ public:
   B();
 
 private:
-  A obj;
+  A mobj;
 };
 
 class C {
