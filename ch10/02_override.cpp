@@ -6,8 +6,9 @@ public:
     void fun2(float);
     virtual void fun3(float);
     virtual void fun4(int);*/
-  virtual void fun5(double);
+  virtual void fun5(double) final; // won't allow overriding
   // virtual void fun6(float); //watch
+  virtual ~Base() = default; // must
 };
 
 class Derived : public Base {
@@ -18,7 +19,8 @@ public:
     virtual void fun3(int);
     virtual void fun4(int) override;*/
   virtual void fun5(int);
-  // virtual void fun6(int) override; //watch error
+  // virtual void fun6(int) override; //watch
+  ~Derived();
 };
 void Derived::fun5(int a) {
   std::cout << a << ": Derived's fun5()" << std::endl;
